@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600px" height="900px" viewBox="0 0 1600 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1600" height="900"></rect>
+            <rect id="Rectangle-2" fill="#73BD00" x="76.5396627" y="86.875" width="374.765771" height="375"></rect>
+            <rect id="Rectangle-2-Copy" fill="#284159" x="476.602124" y="480.625" width="374.765771" height="375"></rect>
+            <g id="Group" transform="translate(1230.566871, 56.463415)">
+                <ellipse id="Oval" fill="#53C5EE" cx="154.248107" cy="154.344512" rx="154.248107" ry="154.344512"></ellipse>
+                <text id="MyClass" font-family="PragmataProMono, PragmataPro Mono" font-size="64" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="38.6533807" y="175.375">MyClass</tspan>
+                </text>
+            </g>
+            <path d="M1386.26397,383.40625 L1386.26397,536.5" id="Line" stroke="#86888B" stroke-width="17"></path>
+            <path id="Line-decoration-1" d="M1386.26397,536.5 L1389.26397,525.7 L1383.26397,525.7 L1386.26397,536.5 Z" stroke="#86888B" stroke-width="17"></path>
+            <text id="1" font-family="PragmataProMono, PragmataPro Mono" font-size="302" font-weight="normal" fill="#FFFFFF">
+                <tspan x="190.843223" y="395.5">1</tspan>
+            </text>
+            <text id="2" font-family="PragmataProMono, PragmataPro Mono" font-size="302" font-weight="normal" fill="#FFFFFF">
+                <tspan x="590.437227" y="795.8125">2</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

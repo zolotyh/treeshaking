@@ -1,0 +1,67 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+@import url(../../lib/font/open-sans/open-sans.css);
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #1d1f24;
+$headingColor: #1d1f24;
+
+$mainFontSize: 5vh;
+$mainFont: Open Sans, sans-serif;
+$headingFont: Open Sans, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 500;
+$linkColor: #03af5e;
+$linkColorHover: lighten( $linkColor, 10% );
+$selectionBackgroundColor: #328fec;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+	font-weight: 100;
+}
+
+.reveal pre > code {
+  font-size: 3.5vh;
+  line-height: 1.2em;
+  font-family: PragmataProMono, monospace;
+  padding: .5em;
+}
+.reveal pre {
+  margin: 0;
+  width: 100%;
+  box-shadow: none;
+}
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}

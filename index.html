@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/wrike.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+    <style>
+      .reveal .solid {
+        width: 2ex;
+        display:inline-block;
+        text-align:center;
+        font-weight: 400;
+      }
+      .reveal li {
+        margin-bottom: .5em;
+      }
+      .reveal pre.opacity * {
+        color: rgba(255,255,255, 0.3) !important;
+      }
+      .reveal .tag {
+        width: 12ex;
+        display:inline-block;
+        float: left;
+        font-weight:500;
+      }
+
+      .reveal pre.opacity mark,
+      .reveal pre.opacity mark * {
+        color: rgba(255,255,255, 1) !important;
+        background-color:transparent;
+      }
+
+      .reveal ul.solid-ul li {
+        list-style:none;
+      }
+
+      .hidden {
+        visibility:hidden;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>
+            Dart treeshaking
+            <small>для других платформ</small>
+          </h2>
+          <p></p>
+          <p>Алексей Золотых, Wrike</p>
+        </section>
+        <section>
+          <p>
+            left-pad
+          </p>
+        </section>
+        <section>
+          <h2>Тра-ла-ла</h2>
+          <img src="img/1.jpg" alt="">
+        </section>
+        <section>
+          Почему это происходит?
+        </section>
+        <section>
+          <p>Размер имеет значение</p>
+          <img src="img/3.jpg" alt="">
+        </section>
+        <section>
+          <p>Минутка тро-ло-ло</p>
+          <img src="img/2.jpg" alt="">
+        </section>
+        <section>
+          А что было бы если?
+        </section>
+        <section>
+          Нельзя писать фронтенд также как бекенд
+        </section>
+        <section>
+          Но мы пытаемся
+        </section>
+        <section data-transition="slide none">
+          <p>С чего все началось</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!--Плагины и код--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>С чего все началось</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!--Плагины и код--&gt;
+  &lt;!--Еще больше плагинов и кода--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>С чего все началось</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!--Плагины и код--&gt;
+  &lt;!--Еще больше плагинов и кода--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            Нужно что-то менять!
+          </p>
+        </section>
+        <section>
+          <p>Браузер не оценит читаемость кода</p>
+        </section>
+        <section data-transition="none">
+          <p>Набор для выживания</p>
+          <ul>
+          	<li class="fragment">Много файлов → Один файл</li>
+            <li class="fragment">
+              Уменьшение объема кода
+              <ul>
+              	<li class="fragment">gzip</li>
+              	<li class="fragment">уменьшение самого файла</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <p>Набор для выживания</p>
+          <ul>
+          	<li>Много файлов → Один файл</li>
+            <li>
+              Уменьшение объема кода
+              <ul>
+              	<li>gzip</li>
+                <li><mark>уменьшение самого файла</mark></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Нет переносов строк и лишних проблелов
+          </p>
+          <p class="fragment">А что дальше?</p>
+        </section>
+        <section>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

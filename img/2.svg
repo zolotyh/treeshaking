@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1637px" height="1020px" viewBox="0 0 1637 1020" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <ellipse id="Oval-Copy" fill="#73BD00" cx="154.248107" cy="865.344512" rx="154.248107" ry="154.344512"></ellipse>
+            <text id="Comp1-Copy" font-family="PragmataProMono, PragmataPro Mono" font-size="144" font-weight="normal" fill="#4A4A4A">
+                <tspan x="345.171875" y="935">Comp1</tspan>
+            </text>
+            <ellipse id="Oval-Copy" fill="#73BD00" cx="1083.24811" cy="865.344512" rx="154.248107" ry="154.344512"></ellipse>
+            <text id="Comp2" font-family="PragmataProMono, PragmataPro Mono" font-size="144" font-weight="normal" fill="#4A4A4A">
+                <tspan x="1274.17188" y="935">Comp2</tspan>
+            </text>
+            <path d="M548.5,319.5 L325.5,640.5" id="Line" stroke="#979797" stroke-width="23"></path>
+            <path id="Line-decoration-1" d="M325.5,640.5 L334.125638,633.341902 L329.198018,629.918664 L325.5,640.5 Z" stroke="#979797" stroke-width="23"></path>
+            <path d="M978.5,319.5 L755.5,640.5" id="Line-Copy" stroke="#979797" stroke-width="23" transform="translate(867.000000, 480.000000) scale(-1, 1) translate(-867.000000, -480.000000) "></path>
+            <path id="Line-Copy-decoration-1" d="M755.5,640.5 L764.125638,633.341902 L759.198018,629.918664 L755.5,640.5 Z" stroke="#979797" stroke-width="23"></path>
+            <ellipse id="Oval-Copy" fill="#73BD00" cx="636.248107" cy="154.344512" rx="154.248107" ry="154.344512"></ellipse>
+            <text id="Parent" font-family="PragmataProMono, PragmataPro Mono" font-size="144" font-weight="normal" fill="#4A4A4A">
+                <tspan x="819.90625" y="224">Parent</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
