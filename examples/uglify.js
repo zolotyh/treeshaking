@@ -1,0 +1,1 @@
+function o(){}o.prototype.log=function(){console.log(1)},(new function(){this.a=new o}).a.log();
