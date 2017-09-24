@@ -1,2 +1,0 @@
-function define(){};
-function require(){};

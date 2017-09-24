@@ -1,1 +1,0 @@
-function C1(){}function C2(){this.c1=new C1}C1.prototype.log=function(){console.log("logger")};var c2=new C2;c2.c1.log();
