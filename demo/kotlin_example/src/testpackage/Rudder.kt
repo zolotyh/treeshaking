@@ -1,0 +1,5 @@
+package testpackage
+
+class Rudder {
+
+}
