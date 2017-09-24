@@ -1,0 +1,38 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack && du -h result/webpack.output.js",
+    "rollup":"rollup -c rollup.config.strong.js && du -h result/rollup.strong.output.js",
+    "browserify": "browserify index.js -o bundle.js",
+    "dart1": "dart2js --trust-primitives --trust-type-annotations  -o result/dart1.js 1.dart && du -h result/dart1.js",
+    "dart2": "dart2js --trust-primitives --trust-type-annotations  -o result/dart2.js 2.dart && du -h result/dart2.js",
+    "dart2min": "dart2js --trust-primitives --trust-type-annotations --minify  -o result/dartmin2.js 2.dart && du -h result/dartmin2.js",
+    "run1": "uglifyjs --compress  --output result/uglify.js bundle.js && du -h result/uglify.js",
+    "run2": "java -jar compilers/yuicompressor-2.4.8.jar bundle.js > result/yui.js && du -h result/yui.js",
+    "run3": "java -jar compilers/closure-compiler.jar --compilation_level SIMPLE  --js bundle.js > result/gcc-simple.js && du -h result/gcc-simple.js",
+    "run4": "uglifyjs --compress  --mangle --toplevel   --output result/uglify.js bundle.js && du -h result/uglify.js",
+    "run5": "java -jar compilers/closure-compiler.jar --compilation_level ADVANCED  --externs ./extern.js  --js bundle.js > result/gcc-advanced.js && du -h result/gcc-advanced.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-uglify": "^2.0.1",
+    "webpack": "^3.6.0",
+    "browserify": "^14.4.0"
+  },
+  "description": ""
+}

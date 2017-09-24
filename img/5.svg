@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="235px" viewBox="0 0 299 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="299" height="235"></rect>
+            <rect id="Rectangle" fill="#F6A623" x="68" y="73" width="91" height="137" rx="8"></rect>
+            <rect id="Rectangle-Copy" fill="#4990E2" x="32" y="73" width="25" height="137" rx="8"></rect>
+            <rect id="Rectangle-Copy-2" fill="#545557" x="165" y="73" width="91" height="137" rx="8"></rect>
+            <text id="libs" font-family="OpenSans-Semibold, Open Sans" font-size="18" font-weight="500" fill="#000000">
+                <tspan x="98.4926758" y="30">libs</tspan>
+            </text>
+            <text id="code" font-family="OpenSans-Semibold, Open Sans" font-size="18" font-weight="500" fill="#000000">
+                <tspan x="25" y="30">code</tspan>
+            </text>
+            <path d="M45.5,35.5 L45.5,65.5" id="Line" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-decoration-1" d="M45.5,65.5 L48.5,54.7 L42.5,54.7 L45.5,65.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path d="M112.5,35.5 L112.5,65.5" id="Line-Copy" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-Copy-decoration-1" d="M112.5,65.5 L115.5,54.7 L109.5,54.7 L112.5,65.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <text id="SDK" font-family="OpenSans-Semibold, Open Sans" font-size="18" font-weight="500" fill="#000000">
+                <tspan x="188.194336" y="30">SDK</tspan>
+            </text>
+            <path d="M204.5,35.5 L204.5,65.5" id="Line-Copy-2" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+            <path id="Line-Copy-2-decoration-1" d="M204.5,65.5 L207.5,54.7 L201.5,54.7 L204.5,65.5 Z" stroke="#000000" stroke-linecap="square" fill="#000000"></path>
+        </g>
+    </g>
+</svg>
