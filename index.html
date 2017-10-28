@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/wrike.css">
+    <link rel="stylesheet" href="style.css" media="all">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -59,24 +60,94 @@
 		<div class="reveal">
       <div class="slides">
         <section>
-          <h2>
-            Dart treeshaking
-            <small>для других платформ</small>
-          </h2>
-          <p></p>
+          <h4>
+            Что посеешь, то и пожмешь
+            <br />
+            <small>
+            или как уменьшить ваш javascript bundle
+            </small>
+
+          </h4>
           <p>Алексей Золотых, Wrike</p>
+        </section>
+        <section data-transition="slide none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li class="fragment">Бекенд != Фронтенд</li>
+            <li class="fragment">Нужно понимать как все устроено</li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li><mark>Бекенд != Фронтенд</mark></li>
+            <li>Нужно понимать как все устроено</li>
+          </ul>
         </section>
         <section>
           <p>
             left-pad
           </p>
         </section>
-        <section>
-          <h2>Тра-ла-ла</h2>
-          <img src="img/1.jpg" alt="">
+        <section data-background="#000">
+          <div class="fade"></div>
+          <div class="star-wars">
+            <div class="crawl">
+              <div class="title">
+                <p>holy wars</p>
+                <h1>Left-pad</h1>
+              </div>
+              <p>Веб-разработчик Азер Кочулу (Azer Koçulu), автор более 250 модулей для Node.js, попал в неприятную ситуацию. В своём блоге он пишет, что несколько недель назад получил письмо от юриста компании Kik (мессенджер) с требованием отозвать модуль с аналогичным названием kik из пакетного менеджера NPM (Node Package Manager).
+              </p>
+              <p>
+                Программист отказался, тогда юрист обратился напрямую в NPM, и администрация проекта удовлетворила его требование, сменив владельца kik без разрешения автора.
+              </p>
+              <p>
+                Азер Кочулу был крайне недоволен этим. Настолько недоволен, что решил в ответ «освободить» (то есть отозвать) все свои модули — более 250 модулей NPM. К сожалению, среди них оказался и left-pad — маленький модуль из 11 строк кода на JavaScript. Он используется при установке зависимостей между пакетами через NPM, в том числе в Node.js, JavaScript-транскомпиляторе Babel и огромном количестве других билдов. Только за прошлый месяц left-pad скачали 2 486 696 с сервера NPM, по их статистике.
+              </p>
+              <p>
+                Код left-pad показан ниже. Он просто заполняет левую часть строки нулями или пробелами.
+              </p>
+              <p>
+                Несмотря на простоту модуля, в тысячах приложений менеджер NPM теперь не мог установить зависимости между пакетами.
+              </p>
+              <p>
+                Чтобы в экстренном порядке исправить ситуацию, технический директор и сооснователь NPM Лори Восс (Laurie Voss) пошёл беспрецедентный шаг (так он назвал его в твиттере) и, «учитывая серьёзность и распространённость проблемы», отменил отзыв модуля. Была опубликована старая версия модуля, аналогичная последней.
+              </p>
+              <p>
+                Сам Азер Кочулу считает, что администрация NPM берёт на себя слишком много полномочий. Он верит в силу движения Open Source и призывает создать «по-настоящему свободную альтернативу NPM». Азер просит прощения у всех веб-разработчиков, кто пострадал в результате его действий. Модуль Kik и другие он выложил на Github.
+              </p>
+            </div>
+          </div>
         </section>
         <section>
-          Почему это происходит?
+          Hello world!
+        </section>
+        <section>
+          <p>Angular</p>
+          <pre><code>
+<div>Hello world!</div>
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            Spring boot (Java)
+          </p>
+          <pre><code data-trim>
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+        return "Hello World!";
+    }
+          </code></pre>
+        </section>
+        <section>
+          <p>Минутка тро-ло-ло</p>
+          <img src="img/2.jpg" alt="">
         </section>
         <section data-transition="slide none">
           <p>С чего все началось</p>
@@ -162,139 +233,519 @@
 &lt;/body&gt;
           </code></pre>
         </section>
-        <section>
+        <section data-transition="none">
+          <p>С чего все началось</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;!--Плагины и код--&gt;
+  &lt;!--Еще больше плагинов и кода--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Меньше файлов → меньше изжержки на сеть</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.<mark>min</mark>.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.<mark>min</mark>.js&quot;&gt;&lt;/script&gt;
+  &lt;!--Плагины и код--&gt;
+  &lt;!--Еще больше плагинов и кода--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.min.js&quot;&gt;&lt;/script&gt;
+  <mark>&lt;!--Плагины и код--&gt;</mark>
+  &lt;!--Еще больше плагинов и кода--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.min.js&quot;&gt;&lt;/script&gt;
+  <mark>&lt;!--Backbone классы--&gt;</mark>
+  &lt;!--Еще больше классов--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.min.js&quot;&gt;&lt;/script&gt;
+  <mark>&lt;!--Angular классы--&gt;</mark>
+  &lt;!--Еще больше г;вна и палок--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.min.js&quot;&gt;&lt;/script&gt;
+  <mark>&lt;!--React компоненты--&gt;</mark>
+  &lt;!--Еще больше преферанса и поэтес--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>Браузер не оценить читаемость кода</p>
+          <pre><code data-trim data-noescape>
+&lt;body&gt;
+  &lt;script src=&quot;bundle.min.js&quot;&gt;&lt;/script&gt;
+  <mark>&lt;!--Vue js компоненты--&gt;</mark>
+  &lt;!--Еще больше крафтового пива--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+  &lt;!--больше больше больше--&gt;
+&lt;/body&gt;
+          </code></pre>
+        </section>
+        <section data-transition="slide none">
+          <p>node</p>
+          <p class="fragment">
+            Дайте нам нормальные модули!
+          </p>
+        </section>
+        <section data-transition="none">
+          <p>ES6+</p>
           <p>
-            Все плавно умирало...
+            Дайте нам нормальные модули!
+          </p>
+        </section>
+        <section data-transition="none">
+          <p>ES6+</p>
+          <p>
+            Дайте нам нормальные модули в браузере!
           </p>
         </section>
         <section>
-          <p>Браузер не оценит читаемость кода</p>
-        </section>
-        <section data-transition="none">
-          <p>Набор для выживания</p>
-          <ul>
-          	<li class="fragment">Много файлов → Один файл</li>
-            <li class="fragment">
-              Уменьшение объема кода
-              <ul>
-              	<li class="hidden">gzip</li>
-                <li class="hidden">уменьшение самого файла</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <p>Размер имеет значение</p>
-          <img src="img/3.jpg" alt="">
-        </section>
-        <section data-transition="none">
-          <p>Набор для выживания</p>
-          <ul>
-          	<li>Много файлов → Один файл</li>
-            <li>
-              Уменьшение объема кода
-              <ul>
-              	<li class="fragment">gzip</li>
-                <li class="fragment">уменьшение самого файла</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section data-transition="none">
-          <p>Набор для выживания</p>
-          <ul>
-          	<li>Много файлов → Один файл</li>
-            <li>
-              Уменьшение объема кода
-              <ul>
-              	<li>gzip</li>
-                <li><mark>уменьшение самого файла</mark></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          Вернемся к left-pad
-        </section>
-        <section>
-          <p>Минутка тро-ло-ло</p>
-          <img src="img/2.jpg" alt="">
-        </section>
-        <section>
-          А что было бы если?
-        </section>
-        <section>
-          <p>Пример с java</p>
-        </section>
-        <section>
-          Нельзя писать фронтенд также как бекенд
-        </section>
-        <section>
-          <pre><code data-trim>console.log(new Date());</code></pre>
-        </section>
-        <section>
-          <p>Dart</p>
+          И теперь мы могём так
           <pre><code data-trim>
-void main() {
-  print(new DateTime.now());
+import _ from 'lodash';
+
+if (_.has([1, 2, 3], 2)) {
+  console.log("debug");
 }
           </code></pre>
         </section>
         <section>
-          <img src="img/11.jpg" alt="">
-        </section>
-        <section>
-          + 2 недели
-        </section>
-        <section>
-          Dart
-          <pre><code>
- print(new DateTime.now().add(new Duration(days: 14)));
-          </code></pre>
-        </section>
-        <section>
-          Stackoverflow magic
-          <img src="img/10.png" alt="">
-        </section>
-        <section>
-          <p>Нужно поддерживаемое решение</p>
-          <p class="fragment">Чтобы можно было переиспользовать</p>
-          <img class="fragment" src="img/4.jpg" alt="">
-        </section>
-        <section>
-          <pre><code>
-var moment = require('moment');
-
-console.log(moment.add(2, 'weeks'));
-          </code></pre>
-        </section>
-        <section>
-          <img src="img/4.svg" width="50%" alt="">
-          <p>javascript</p>
-        </section>
-        <section>
-          <img src="img/5.svg" width="50%" alt="">
-          <p>Dart</p>
-        </section>
-        <section>
           <p>
-            Сравнение -
-            <a href="https://www.peterbe.com/plog/advanced-closure-compiler-vs-uglifyjs2">https://goo.gl/suo6gq</a>
+          И получаем...
           </p>
         </section>
         <section>
-          Уменьшаем JS код
+          <table>
+          	<tr>
+          		<th>Сборщик</th>
+          		<th>Размер</th>
+          	</tr>
+            <tr>
+            	<td>Webpack</td>
+            	<td>531k</td>
+            </tr>
+            <tr>
+            	<td>Rollup</td>
+            	<td>528k</td>
+            </tr>
+          </table>
+        </section>
+        <section data-transition="slide,none">
+          <pre><code data-trim>
+import has from 'lodash/has';
+
+if (has([1, 2, 3], 2)) {
+  console.log("debug");
+}
+          </code></pre>
+        </section>
+        <section data-transition="slide,none">
+          <pre><code data-trim data-noescape>
+import has from <mark>'lodash/has'</mark>;
+
+if (has([1, 2, 3], 2)) {
+  console.log("debug");
+}
+          </code></pre>
         </section>
         <section>
-          Давайте разбираться!
+          <table>
+          	<tr>
+          		<th>Сборщик</th>
+          		<th>Размер</th>
+          	</tr>
+            <tr>
+            	<td>Webpack</td>
+            	<td>42к</td>
+            </tr>
+            <tr>
+            	<td>Rollup</td>
+            	<td>33к</td>
+            </tr>
+          </table>
         </section>
         <section>
-          Выводы
+          <p>Вместо 42k можно написать примерно вот так</p>
+          <pre><code data-trim>
+if([1,2,3].indexOf(2) != -1){
+  console.log('debug');
+}
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <pre><code data-trim>
+const has = (arr,input) =&gt; arr.indexOf(input) != -1
+
+if(has([1,2,3], 2)){
+ console.log('debug');
+}
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <pre><code data-trim data-noescape>
+<mark>const has = (arr,input) =&gt; arr.indexOf(input) != -1</mark>
+
+if(has([1,2,3], 2)){
+ console.log('debug');
+}
+          </code></pre>
+        </section>
+        <section>
+          Ничего не напоминает?
+        </section>
+        <section data-background="#000">
+          <div class="fade"></div>
+          <div class="star-wars">
+            <div class="crawl">
+              <div class="title">
+                <p>holy wars</p>
+                <h1>Left-pad</h1>
+              </div>
+              <p>Веб-разработчик Азер Кочулу (Azer Koçulu), автор более 250 модулей для Node.js, попал в неприятную ситуацию. В своём блоге он пишет, что несколько недель назад получил письмо от юриста компании Kik (мессенджер) с требованием отозвать модуль с аналогичным названием kik из пакетного менеджера NPM (Node Package Manager).
+              </p>
+              <p>
+                Программист отказался, тогда юрист обратился напрямую в NPM, и администрация проекта удовлетворила его требование, сменив владельца kik без разрешения автора.
+              </p>
+              <p>
+                Азер Кочулу был крайне недоволен этим. Настолько недоволен, что решил в ответ «освободить» (то есть отозвать) все свои модули — более 250 модулей NPM. К сожалению, среди них оказался и left-pad — маленький модуль из 11 строк кода на JavaScript. Он используется при установке зависимостей между пакетами через NPM, в том числе в Node.js, JavaScript-транскомпиляторе Babel и огромном количестве других билдов. Только за прошлый месяц left-pad скачали 2 486 696 с сервера NPM, по их статистике.
+              </p>
+              <p>
+                Код left-pad показан ниже. Он просто заполняет левую часть строки нулями или пробелами.
+              </p>
+              <p>
+                Несмотря на простоту модуля, в тысячах приложений менеджер NPM теперь не мог установить зависимости между пакетами.
+              </p>
+              <p>
+                Чтобы в экстренном порядке исправить ситуацию, технический директор и сооснователь NPM Лори Восс (Laurie Voss) пошёл беспрецедентный шаг (так он назвал его в твиттере) и, «учитывая серьёзность и распространённость проблемы», отменил отзыв модуля. Была опубликована старая версия модуля, аналогичная последней.
+              </p>
+              <p>
+                Сам Азер Кочулу считает, что администрация NPM берёт на себя слишком много полномочий. Он верит в силу движения Open Source и призывает создать «по-настоящему свободную альтернативу NPM». Азер просит прощения у всех веб-разработчиков, кто пострадал в результате его действий. Модуль Kik и другие он выложил на Github.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <pre><code data-trim>
+_.padStart('abc', 6);
+// =&gt; '   abc'
+          </code></pre>
+
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li><mark>Бекенд != Фронтенд</mark></li>
+            <li>Нужно понимать как все устроено</li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li>Бекенд != Фронтенд &mdash; ✓</li>
+            <li>Нужно понимать как все устроено</li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li>Бекенд != Фронтенд &mdash; ✓</li>
+            <li><mark>Нужно понимать как все устроено</mark></li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <p>
+              Уменьшение объема кода
+          </p>
+          <ul>
+            <li class="fragment">gzip</li>
+            <li class="fragment">уменьшение самого файла</li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <p>
+              Уменьшение объема кода
+          </p>
+          <ul>
+            <li>gzip</li>
+            <li><mark>уменьшение самого файла</mark></li>
+          </ul>
+        </section>
+        <section data-transition="slide,none">
+          <p>Чем ещё плох этот код?</p>
+          <pre><code data-trim data-noescape>
+import has from 'lodash/has';
+
+if (has([1, 2, 3], 2)) {
+  console.log("debug");
+}
+          </code></pre>
+        </section>
+        <section data-transition="slide,none">
+          <p>Чем ещё плох этот код?</p>
+          <pre><code data-trim data-noescape>
+import has from <mark>'lodash/has'</mark>;
+
+if (has([1, 2, 3], 2)) {
+  console.log("debug");
+}
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            Dart
+          </p>
+          <pre><code data-trim>
+void main(){
+  if([1,2,3].contains(2)){
+    print('debug');
+  }
+}
+          </code></pre>
+        </section>
+        <section>
+           Dart - 24K
+        </section>
+        <section>
+          <p>
+            Dart
+          </p>
+          <pre><code data-trim>
+void main(){
+  if([1,2,3].contains(2)){
+    print('debug');
+  }
+  [1,2,3].forEach((item){
+    print(item);
+  });
+
+}
+          </code></pre>
+        </section>
+        <section>
+           Dart - 52K
+        </section>
+        <section>
+          <p>Angular</p>
+          <ul>
+            <li>
+              <span style="display: inline-block; width: 12ex">
+                Typescript -
+              </span>284kb
+              <span class="fragment" data-fragment-index="3">💩</span>
+            </li>
+            <li class="fragment" data-fragment-index="1">
+              <span style="display: inline-block; width: 12ex">
+                Dart -
+              </span>220kb
+            </li>
+            <li class="fragment" data-fragment-index="2">
+              <span style="display: inline-block; width: 12ex">
+                Dart + uglify -
+              </span>192kb
+            </li>
+          </ul>
+        </section>
+        <section>
+          <img src="img/31.jpg" alt="">
+        </section>
+        <section>
+          <img src="img/32.jpg" alt="">
+        </section>
+        <section>
+          Копаем глубже
+        </section>
+        <section>
+          <p>
+            src/math.js
+          </p>
+          <pre><code>
+export function square(x) {
+  return x * x;
+}
+
+export function cube(x) {
+  return x * x * x;
+}
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            src/index.js
+          </p>
+          <pre><code data-trim>
+import { cube } from './math.js';
+
+console.log(cube(10));
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim>
+var cube = function(a) {
+  return a * a;
+}
+console.log(cube(10));
+          </code></pre>
+        </section>
+        <section>
+          <p>
+            Dart
+          </p>
+          <pre><code>
+// Стандартная библиотека
+...
+    main: function() {
+      H.printString("100");
+    },
+...
+// Стандартная библиотека
+          </code></pre>
+        </section>
+        <section>
+          <pre><code>
+class Wheel {
+  pump(){
+    console.log('puuuuf');
+  }
+}
+
+class Rudder {
+  turn(){
+    console.log('turn');
+  }
+}
+
+export {Wheel, Rudder}
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim>
+import { Wheel } from './module.js';
+
+class Car {
+  constructor(){
+    this.wheel = new Wheel();
+  }
+}
+
+const car = new Car();
+car.wheel.pump();
+          </code></pre>
+        </section>
+        <section>
+          <p>Uglify vs Google Closure Compiler</p>
+          <p>
+            Сравнение - <a href="https://goo.gl/suo6gq">https://goo.gl/suo6gq</a>
+          </p>
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li>Бекенд != Фронтенд &mdash; ✓</li>
+            <li><mark>Нужно понимать как все устроено</mark></li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <h4>
+            2 вывода
+          </h4>
+          <ul>
+            <li>Бекенд != Фронтенд &mdash; ✓</li>
+            <li>Нужно понимать как все устроено &mdash; ✓</li>
+          </ul>
         </section>
         <section>
           Спасибо за внимание!
           <p>
-            twitter: @zolotyh
+            twitter: <a href="https://twitter.com/zolotyh">@zolotyh</a>
           </p>
           <p>
             Слайды: <a href="https://goo.gl/vrrpfW">https://goo.gl/vrrpfW</a>

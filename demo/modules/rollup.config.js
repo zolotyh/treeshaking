@@ -5,9 +5,7 @@ export default {
   input: 'index.js',
   output: {
     file: 'rollup.output.js',
-    format: 'iife'
+    format: 'iife',
   },
-  plugins: [
-    babel(),
-  ]
-}
+  plugins: [babel(), uglify()],
+};

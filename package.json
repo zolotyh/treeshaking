@@ -39,9 +39,8 @@
     "grunt-sass": "~1.2.0",
     "grunt-zip": "~0.17.1",
     "mustache": "~2.2.1",
-    "node-sass": "~3.13.0",
+    "node-sass": "~3.13.0"
   },
   "license": "MIT",
-  "dependencies": {
-  }
+  "dependencies": {}
 }

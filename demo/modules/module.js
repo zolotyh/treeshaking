@@ -1,4 +1,3 @@
-
 class Wheel {
   pump(){
     console.log('puuuuf');
